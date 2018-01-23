@@ -38,13 +38,13 @@ N/A
 * JavaScript/config/config.js
 * JavaScript/index/index.js
 
-####HTML Element Events
+#### HTML Element Events
 None
 
-####Cookies
+#### Cookies
 None
 
-###stats.html
+### stats.html
 
 Displays details about the current state of the Blockchain. The top section contains information about block timings and transactions showing when the last block was added, how tall the Blockchain is, how many transactions were in the last block and the average time between blocks being added to the Blockchain. It also displays graphs showing the time between each of the blocks and the transactions per block. To save loading time it only loads the last 125 blocks.
 
@@ -52,10 +52,10 @@ The “Blockchain Explorer” offers a visual representation of the Blockchain w
 
 The page polls the Blockchain every 10 seconds and if new blocks have been added it will adjust the stats accordingly, pushing the blocks to the end of the Blockchain Explorer also.
 
-####Participants
+#### Participants
 N/A
 
-####Files Used
+#### Files Used
 *CSS*
 * Style/main.css
 * Style/stats.css
@@ -65,23 +65,23 @@ N/A
 * JavaScript/stats.js/charts.js
 * JavaScript/stats/stats.js
 
-####HTML Element Events
+#### HTML Element Events
 None
 
-####Coookies
+#### Coookies
 None
 
-###regulator-view.html
+### regulator-view.html
 Displays the transactions from the Blockchain that are applicable to the user. The page calls out to retrieve the transactions and then parses them to pull out the function names, callers and arguments. It then uses the function names to define which type of transaction it was (Create, Transfer, Update, Scrap) and then it formats the transaction into a new row for the table.
 
 Using the menu in the top right of the page the user can select which participant they wish to act as. These participants have different views of the ledger. The regulator is able to view all the transactions that have occurred on the Blockchain whereas the other users can only view transactions that they are directly involved with and the transactions that involved a car the own(ed) up to the point it left/leaves their ownership.
 
 The transactions are able to be sorted by time and V5cID and the user can filter the transactions by their type (Create, Transfer, Update, Failed). The list of transactions is searchable by V5cID so a user can see all the transactions they have permission to view for a particular vehicle.
 
-####Participants
+#### Participants
 * All
 
-####Files Used
+#### Files Used
 *CSS*
 * Style/main.css
 * Style/ledger.css
@@ -91,7 +91,7 @@ The transactions are able to be sorted by time and V5cID and the user can filter
 * JavaScript/config/config.js
 * JavaScript/admin/identity.js
 
-####HTML Element Events
+#### HTML Element Events
 	Attribute: #menuBtn
 	File:      JavaScript/ledger/ledger.js
 	Call Type: onclick
@@ -132,12 +132,12 @@ The transactions are able to be sorted by time and V5cID and the user can filter
 	Call Type: onclick
 	Function:  sortV5CID(<order>)
 
-####Cookies
+#### Cookies
 	Name:        user
 	Value:       <username>
 	Description: Stores the username of the current selected user.
 
-###regulator.html
+### regulator.html
 
 Allows the regulator to create vehicle templates and transfer them on to a manufacturer. 
 
@@ -145,10 +145,10 @@ The page offers a “Create V5C” button which will make the call to produce a 
 
 Currently the page by default has the DVLA logged in. This is unable to be changed as there is only one regulator.
 
-####Participants
+#### Participants
 * DVLA
 
-####Files Used
+#### Files Used
 *CSS*
 * Style/main.css
 * Style/contractData.css
@@ -166,7 +166,7 @@ Currently the page by default has the DVLA logged in. This is unable to be chang
 * JavaScript/page_functions/scrollbar.js
 * JavaScript/participant_functions/recipients.js
 
-####HTML Element Events
+#### HTML Element Events
 	Attribute: body 
 	File:      JavaScript/config.js
 	Call Type: onload
@@ -178,7 +178,7 @@ Currently the page by default has the DVLA logged in. This is unable to be chang
 	File:      JavaScript/asset_functions/asset_interaction.js
 	Call Type: onclick
 	Function:  createAsset()
-####Cookies
+#### Cookies
 	Name:        user
 	Value:       <username>
 	Description: Stores the username of the current selected user.
@@ -189,7 +189,7 @@ Currently the page by default has the DVLA logged in. This is unable to be chang
 	Value:       <username>
 	Description: Stores the username of the current selected user so if the page refreshes it keeps that user.
 
-###manufacturer.html
+### manufacturer.html
 
 Allows the manufacturer to transfer fully defined vehicles to the dealerships.
 
@@ -197,12 +197,12 @@ The page pulls up a list of all vehicles owned by the selected manufacturer and 
 
 Currently the page by default has Alfa Romeo logged in. The user can use the menu in the top right to select any one of the other manufacturers.
 
-####Participants
+#### Participants
 * Alfa Romeo
 * Toyota
 * Jaguar Land Rover
 
-####Files Used
+#### Files Used
 *CSS*
 * Style/main.css
 * Style/contractData.css
@@ -220,14 +220,14 @@ Currently the page by default has Alfa Romeo logged in. The user can use the men
 * JavaScript/page_functions/scrollbar.js
 * JavaScript/participant_functions/recipients.js
 
-####HTML Element Events
+#### HTML Element Events
 
 	Attribute: #menuBtn 
 	File:      JavaScript/page_functions/general_page_functions.js
 	Call Type: onclick
 	Function:  toggleMenu()
 	
-####Cookies
+#### Cookies
 	Name:        user
 	Value:       <username>
 	Description: Stores the username of the current selected user.
@@ -238,7 +238,7 @@ Currently the page by default has Alfa Romeo logged in. The user can use the men
 	Value:       <username>
 	Description: Stores the username of the current selected user so if the page refreshes it keeps that user.
 
-###dealership.html
+### dealership.html
 
 Allows the dealership to transfer vehicles to the lease companies.
 
@@ -246,12 +246,12 @@ The page pulls up a list of all vehicles owned by the selected dealership and th
 
 Currently the page by default has Beechvale Group logged in. The user can use the menu in the top right to select any one of the other dealerships.
 
-####Participants
+#### Participants
 * Beechvale Group
 * Milescape
 * Viewers Alfa Romeo
 
-####Files Used
+#### Files Used
 *CSS*
 * Style/main.css
 * Style/contractData.css
@@ -269,14 +269,14 @@ Currently the page by default has Beechvale Group logged in. The user can use th
 * JavaScript/page_functions/scrollbar.js
 * JavaScript/participant_functions/recipients.js
 
-####HTML Element Events
+#### HTML Element Events
 
 	Attribute: #menuBtn 
 	File:      JavaScript/page_functions/general_page_functions.js
 	Call Type: onclick
 	Function:  toggleMenu()
 	
-####Cookies
+#### Cookies
 	Name:        user
 	Value:       <username>
 	Description: Stores the username of the current selected user.
@@ -287,7 +287,7 @@ Currently the page by default has Beechvale Group logged in. The user can use th
 	Value:       <username>
 	Description: Stores the username of the current selected user so if the page refreshes it keeps that user.
 
-###=#lease-company.html
+### =#lease-company.html
 
 Allows the lease company to transfer vehicles to the leasees.
 
@@ -295,12 +295,12 @@ The page pulls up a list of all vehicles owned by the selected lease company and
 
 Currently the page by default has LeaseCan logged in. The user can use the menu in the top right to select any one of the other lease companies.
 
-####Participants
+#### Participants
 * LeaseCan
 * Every Car Leasing
 * Regionwide Vehicle Contracts
 
-####Files Used
+#### Files Used
 *CSS*
 * Style/main.css
 * Style/contractData.css
@@ -318,14 +318,14 @@ Currently the page by default has LeaseCan logged in. The user can use the menu 
 * JavaScript/page_functions/scrollbar.js
 * JavaScript/participant_functions/recipients.js
 
-####HTML Element Events
+#### HTML Element Events
 
 	Attribute: #menuBtn 
 	File:      JavaScript/page_functions/general_page_functions.js
 	Call Type: onclick
 	Function:  toggleMenu()
 	
-####Cookies
+#### Cookies
 	Name:        user
 	Value:       <username>
 	Description: Stores the username of the current selected user.
@@ -336,19 +336,19 @@ Currently the page by default has LeaseCan logged in. The user can use the menu 
 	Value:       <username>
 	Description: Stores the username of the current selected user so if the page refreshes it keeps that user.
 
-###leasee.html
+### leasee.html
 Allows the leasee to transfer vehicles to the scrap merchants.
 
 The page pulls up a list of all vehicles owned by the selected leasee and these can be transferred to any of the scrap merchants.
 
 Currently the page by default has Joe Payne logged in. The user can use the menu in the top right to select any one of the other leasees.
 
-####Participants
+#### Participants
 * Joe Payne
 * Andrew Hurt
 * Anthony O’Dowd
 
-####Files Used
+#### Files Used
 *CSS*
 * Style/main.css
 * Style/contractData.css
@@ -366,14 +366,14 @@ Currently the page by default has Joe Payne logged in. The user can use the menu
 * JavaScript/page_functions/scrollbar.js
 * JavaScript/participant_functions/recipients.js
 
-####HTML Element Events
+#### HTML Element Events
 
 	Attribute: #menuBtn 
 	File:      JavaScript/page_functions/general_page_functions.js
 	Call Type: onclick
 	Function:  toggleMenu()
 	
-####Cookies
+#### Cookies
 	Name:        user
 	Value:       <username>
 	Description: Stores the username of the current selected user.
@@ -384,19 +384,19 @@ Currently the page by default has Joe Payne logged in. The user can use the menu
 	Value:       <username>
 	Description: Stores the username of the current selected user so if the page refreshes it keeps that user.
 
-###manufacturer-update.html
+### manufacturer-update.html
 Allows the manufacturer to update fields of vehicles that they own fully defined or not.
 
 The page displays a list of all vehicles that the manufacturer owns and allows the user to select the one they wish to edit. A box appears in which the user can enter new values for the VIN, make, model, colour and reg.
 
 Currently the page by default has Alfa Romeo logged in. The user can use the menu in the top right to select any one of the other manufacturers.
 
-####Participants
+#### Participants
 * Alfa Romeo
 * Toyota
 * Jaguar Land Rover
 
-####Files Used
+#### Files Used
 *CSS*
 * Style/main.css
 * Style/contractData.css
@@ -413,7 +413,7 @@ Currently the page by default has Alfa Romeo logged in. The user can use the men
 * JavaScript/page_functions/scrollbar.js
 * JavaScript/participant_functions/recipients.js
 
-####HTML Element Events
+#### HTML Element Events
 	Attribute: #menuBtn 
 	File:      JavaScript/page_functions/general_page_functions.js
 	Call Type: onclick
@@ -458,19 +458,19 @@ Currently the page by default has Alfa Romeo logged in. The user can use the men
 	Value:       <username>
 	Description: Stores the username of the current selected user so if the page refreshes it keeps that user.
 
-###scrap-merchant.html
+### scrap-merchant.html
 Allows the scrap merchant to scrap vehicles.
 
 The page pulls up a list of all vehicles owned by the selected scrap merchant and these can be marked as scrapped
 
 Currently the page by default has Cray Bros (London) logged in. The user can use the menu in the top right to select any one of the other scrap merchants.
 
-####Participants
+#### Participants
 * Cray Bros (London)
 * ScrapIt! UK
 * Aston Scrap Centre
 
-####Files Used
+#### Files Used
 *CSS*
 * Style/main.css
 * Style/contractData.css
@@ -488,13 +488,13 @@ Currently the page by default has Cray Bros (London) logged in. The user can use
 * JavaScript/page_functions/scrollbar.js
 * JavaScript/participant_functions/recipients.js
 
-####HTML Element Events
+#### HTML Element Events
 	Attribute: #menuBtn 
 	File:      JavaScript/page_functions/general_page_functions.js
 	Call Type: onclick
 	Function:  toggleMenu()
 
-####Cookies
+#### Cookies
 	Name:        user
 	Value:       <username>
 	Description: Stores the username of the current selected user.
@@ -505,7 +505,7 @@ Currently the page by default has Cray Bros (London) logged in. The user can use
 	Value:       <username>
 	Description: Stores the username of the current selected user so if the page refreshes it keeps that user.
 
-###admin-console.html
+### admin-console.html
 
 Allows the user to create a number of scenarios and create new participant.
 
@@ -513,10 +513,10 @@ The user can choose to click buttons to create a simple or full scenario. These 
 
 The user can create a new participant to be added to the network selecting their type. The page will auto generate a name address and company name however the user can choose to overwrite these.
 
-####Participants
+#### Participants
 N/A
 
-####Files Used
+#### Files Used
 *CSS*
 * Style/main.css
 * Style/admin.css
@@ -527,7 +527,7 @@ N/A
 * JavaScript/admin/admin-console.js
 * JavaScript/page_functions/general_page_functions.js
 
-####HTML Element Events
+#### HTML Element Events
 	Attribute: .pgBtn
 	File:      JavaScript/admin/admin-console.js
 	Call Type: onclick
@@ -561,13 +561,13 @@ N/A
 	Call Type: onclick
 	Function:  closeEditTbl
 
-####Cookies
+#### Cookies
 None
 
-##Configuration File
+## Configuration File
 The client side configuration file defines a number of variables that can be called by other JavaScript files. The file defines a config object that has the fields logo and participant that are each both objects. 
 
-###config.logo
+### config.logo
 Stores details about the logo to be loaded on each page. These details are used by the loadLogo function so that the height and width appears the same on all the pages and that the page source.
 
 The config.logo object has the properties:
@@ -615,5 +615,5 @@ The config.logo object has the properties:
 	Name:        scrap-merchant.src
 	Description: The file path to the image that should appear for the logo when the user is of type “scrap-merchant”.
 	
-###config.participants
+### config.participants
 Store details about the participants who exist on the client side. These details are used by the pages to add the name of the user when it loads them on the page. The format of object to store the users is config.participants.users.<user_type> which then stores an array of user objects that have the fields company, type and user with user being the name such as Lesley. The object also store config.participants.<user_type> which stores the default user object for each of those types which will be the ones used initially when the pages load.
