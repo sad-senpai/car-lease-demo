@@ -1,4 +1,4 @@
-#Client Side
+# Client Side
 
 * [Navigation Stucture](navigation-structure)
 * [Pages](pages)
@@ -13,24 +13,24 @@
   * [config.logo](config.logo)
   * [config.participants](config.participants)
 
-##Navigation Structure
+## Navigation Structure
 
 ![Navigation Diagram](/Images/Client_Side_Navigation.png)
 
 The client side is designed a number of pages coming from a single page containing a list of links to those pages.
 
-##Pages
+## Pages
 
-###index.html
+### index.html
 
 The navigation page to access the different parts of the application. It contains links to all the other pages of the site. 
 The page will poll the height of the Blockchain to check whether the vehicle chaincode has been deployed if not it the links will be greyed out and the user asked to please wait. 
 If the chaincode has been deployed but no other transactions have occurred, then the user will be told of the options to create a scenario.
 
-####Participants
+#### Participants
 N/A
 
-####Files Used
+#### Files Used
 *CSS*
 * Style/main.css
 
